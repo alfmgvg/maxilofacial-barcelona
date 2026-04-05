@@ -1,42 +1,44 @@
 // SEO CONFIG FOR DOMAIN
-// Recommended domain: https://cirujanomaxilofacialsabadell.com
+// Recommended domain: https://maxilofacialbarcelona.com
+// Secondary domain redirect: https://cirujanomaxilofacial.info
 // Main SEO title:
-// "Cirujano Maxilofacial en Sabadell | Muelas del juicio e implantes dentales"
+// "Cirujano Maxilofacial en Barcelona | Muelas del juicio e implantes dentales"
 // Meta description:
-// "Unidad de Cirugía Oral y Maxilofacial en el Hospital Quirónsalud del Vallès. Especialistas en muelas del juicio, cordales incluidos e implantes dentales en Sabadell y el Vallès."
+// "Unidad de Cirugía Oral y Maxilofacial en HM Nou Delfos, Barcelona. Especialistas en muelas del juicio, cordales incluidos, implantes dentales y cirugía oral compleja."
 
-export default function LandingQuironValles() {
+export default function LandingHMNouDelfos() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Dentist',
-    name: 'Unidad de Cirugía Oral y Maxilofacial - Hospital Quirónsalud del Vallès',
+    '@type': 'MedicalClinic',
+    name: 'Unidad de Cirugía Oral y Maxilofacial - HM Nou Delfos',
     description:
-      'Unidad especializada en cirugía oral y maxilofacial en Sabadell. Tratamientos de muelas del juicio, cordales incluidos, quistes maxilares e implantes dentales. Atendemos pacientes privados y de aseguradoras con cobertura en el Hospital Quirónsalud del Vallès.',
+      'Unidad especializada en cirugía oral y maxilofacial en Barcelona. Tratamientos de muelas del juicio, cordales incluidos, implantes dentales y cirugía oral compleja. Atención hospitalaria en HM Nou Delfos.',
     telephone: '+34 679 176 144',
-    url: 'https://cirujanomaxilofacialsabadell.com',
-    image: 'https://cirujanomaxilofacialsabadell.com/logo-ocm.png',
+    url: 'https://maxilofacialbarcelona.com',
+    image: 'https://maxilofacialbarcelona.com/logo-ocm.png',
     medicalSpecialty: 'Oral and Maxillofacial Surgery',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Passeig Rubió i Ors, 23',
-      addressLocality: 'Sabadell',
+      streetAddress: 'Avinguda de Vallcarca, 151',
+      addressLocality: 'Barcelona',
       addressRegion: 'Barcelona',
-      postalCode: '08203',
+      postalCode: '08023',
       addressCountry: 'ES',
     },
     areaServed: [
-      'Sabadell',
-      'Terrassa',
-      'Sant Cugat del Vallès',
-      'Rubí',
-      'Cerdanyola del Vallès',
-      'Barberà del Vallès',
-      'Castellar del Vallès',
-      'Sant Quirze del Vallès',
       'Barcelona',
+      'Gràcia',
+      'Sarrià-Sant Gervasi',
+      'Eixample',
+      'Horta-Guinardó',
+      'Les Corts',
+      'Badalona',
+      'L\'Hospitalet de Llobregat',
+      'Sant Cugat del Vallès',
+      'Barcelona provincia',
     ],
     sameAs: [
-      'https://www.quironsalud.com/valles/es/cita-medica#r!/n!/29?dir=next',
+      'https://www.hmhospitales.com/hm-nou-delfos',
     ],
   };
 
@@ -51,7 +53,7 @@ export default function LandingQuironValles() {
     },
     {
       title: 'Cirugía oral compleja',
-      text: 'Abordaje de quistes maxilares, dientes incluidos, infecciones y otras patologías de cirugía oral.',
+      text: 'Abordaje de quistes maxilares, dientes incluidos, infecciones y otras patologías de cirugía oral y maxilofacial.',
     },
   ];
 
@@ -62,13 +64,6 @@ export default function LandingQuironValles() {
       img: '/doctors/mogedas.jpg',
       position: 'center 32%',
       bio: 'Licenciado en Medicina y Cirugía por la UMH de Alicante. Especialista en Cirugía Oral y Maxilofacial vía MIR en el Hospital Vall d’Hebron. Doctor en Medicina y Cirugía Cum Laude por la UAB y Fellow del European Board of Oral and Maxillofacial Surgery. Actualmente es adjunto del Servicio de Cirugía Oral y Maxilofacial del Hospital Parc Taulí y profesor colaborador de la UAB.',
-    },
-    {
-      name: 'Dra. Laia Fité',
-      role: 'Cirujana Oral y Maxilofacial',
-      img: '/doctors/fite.jpg',
-      position: 'center 34%',
-      bio: 'Licenciada en Medicina y Cirugía, especialista vía MIR en Cirugía Oral y Maxilofacial en el Hospital Vall d’Hebron de Barcelona. Desde 2019 combina la actividad sanitaria pública en el Hospital Parc Taulí de Sabadell con la práctica privada. Formada en patología de glándulas salivales, patología infantil, cirugía del sueño, así como implantología y cirugía oral.',
     },
     {
       name: 'Dr. Nil Valentínes',
@@ -91,23 +86,31 @@ export default function LandingQuironValles() {
       position: 'center 33%',
       bio: 'Cirujano especializado en cirugía oral y maxilofacial. “La medicina ha sido mi pasión desde pequeño. Durante los años de carrera despertó mi interés por la anatomía de cabeza y cuello, su complejidad y la precisión necesaria en esta área anatómica. Esto me ha llevado a especializarme como cirujano oral y maxilofacial, prestando atención a cada detalle para conseguir la recuperación precoz de mis pacientes”.',
     },
+    {
+      name: 'Dr. Roderick Bonilla',
+      role: 'Cirujano Oral y Maxilofacial',
+      img: '/doctors/roderick.jpg',
+      position: 'center 28%',
+      bio: 'Currículum pendiente de incorporar. Próximamente añadiremos su perfil profesional completo y fotografía definitiva.',
+    },
   ];
 
   const nearbyCities = [
-    'Sabadell',
-    'Terrassa',
-    'Sant Cugat del Vallès',
-    'Rubí',
-    'Cerdanyola del Vallès',
-    'Barberà del Vallès',
-    'Castellar del Vallès',
-    'Sant Quirze del Vallès',
     'Barcelona',
+    'Gràcia',
+    'Sarrià-Sant Gervasi',
+    'Eixample',
+    'Horta-Guinardó',
+    'Les Corts',
+    'Badalona',
+    'L’Hospitalet de Llobregat',
+    'Sant Cugat del Vallès',
+    'Esplugues de Llobregat',
   ];
 
   function TeamMemberCard({ doctor }) {
     return (
-      <article className="rounded-3xl border border-cyan-100 bg-white p-5 shadow-sm">
+      <article className="rounded-3xl border border-sky-100 bg-white p-5 shadow-sm">
         <div className="mb-4 h-72 overflow-hidden rounded-2xl bg-slate-100">
           <img
             src={doctor.img}
@@ -119,7 +122,7 @@ export default function LandingQuironValles() {
         </div>
 
         <h3 className="text-lg font-semibold">{doctor.name}</h3>
-        <p className="mt-1 text-sm font-medium text-cyan-700">{doctor.role}</p>
+        <p className="mt-1 text-sm font-medium text-sky-700">{doctor.role}</p>
         <p className="mt-3 text-sm leading-6 text-slate-600">{doctor.bio}</p>
       </article>
     );
@@ -132,7 +135,7 @@ export default function LandingQuironValles() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
-      <header className="sticky top-0 z-40 w-full border-b border-cyan-100 bg-white/95 backdrop-blur">
+      <header className="sticky top-0 z-40 w-full border-b border-sky-100 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
           <div className="flex items-center gap-4">
             <img
@@ -147,46 +150,45 @@ export default function LandingQuironValles() {
 
           <div className="flex items-center gap-3">
             <img
-              src="/logo-quiron-valles.png"
-              alt="Hospital Quirónsalud del Vallès"
+              src="/logo-hm-nou-delfos.png"
+              alt="HM Nou Delfos"
               className="h-10 w-auto"
             />
           </div>
         </div>
       </header>
 
-      <main className="min-h-screen bg-white pb-24 text-cyan-900 selection:bg-cyan-100">
-        <section className="border-b border-cyan-100 bg-cyan-50">
+      <main className="min-h-screen bg-white pb-24 text-slate-900 selection:bg-sky-100">
+        <section className="border-b border-sky-100 bg-sky-50">
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
             <div>
               <span className="inline-flex rounded-full border border-slate-300 px-4 py-1 text-sm font-medium text-slate-700">
-                Cirugía Oral y Maxilofacial · Hospital Quirónsalud del Vallès
+                Cirugía Oral y Maxilofacial · HM Nou Delfos
               </span>
 
-              <h1 className="mt-5 text-4xl font-bold tracking-tight text-cyan-900 lg:text-5xl">
+              <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-900 lg:text-5xl">
                 Especialistas en muelas del juicio, cirugía oral compleja e implantes
-                dentales en Sabadell
+                dentales en Barcelona
               </h1>
 
               <p className="mt-5 text-lg leading-8 text-slate-700">
-                Atendemos a pacientes de Sabadell y poblaciones cercanas que necesitan
+                Atendemos a pacientes de Barcelona y poblaciones cercanas que necesitan
                 extracción de cordales incluidos, tratamiento de quistes maxilares e
-                implantes dentales, tanto en casos sencillos como complejos. Atendemos
-                pacientes privados y de aseguradoras con cobertura en el Hospital
-                Quirónsalud del Vallès.
+                implantes dentales, tanto en casos sencillos como complejos. Atención
+                especializada en entorno hospitalario en HM Nou Delfos.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="https://www.quironsalud.com/valles/es/cita-medica#r!/n!/29?dir=next"
-                  className="rounded-2xl bg-cyan-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-cyan-700"
+                  href="#contacto"
+                  className="rounded-2xl bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-800"
                 >
                   Pedir cita
                 </a>
 
                 <a
                   href="tel:+34679176144"
-                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-cyan-900 transition hover:bg-cyan-100"
+                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-sky-100"
                 >
                   Llamar al 679 176 144
                 </a>
@@ -195,7 +197,7 @@ export default function LandingQuironValles() {
                   href="https://wa.me/34679176144"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-cyan-900 transition hover:bg-cyan-100"
+                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-sky-100"
                 >
                   WhatsApp
                 </a>
@@ -208,7 +210,7 @@ export default function LandingQuironValles() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-cyan-100 bg-white p-6 shadow-sm sm:col-span-2">
+              <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm sm:col-span-2">
                 <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
                   Tratamientos destacados
                 </p>
@@ -221,17 +223,17 @@ export default function LandingQuironValles() {
                 </ul>
               </div>
 
-              <div className="rounded-3xl border border-cyan-100 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-bold">1ª planta</p>
+              <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
+                <p className="text-3xl font-bold">Barcelona</p>
                 <p className="mt-2 text-slate-600">
-                  Ubicación de la consulta en el hospital
+                  Atención hospitalaria en HM Nou Delfos
                 </p>
               </div>
 
-              <div className="rounded-3xl border border-cyan-100 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-bold">Sabadell</p>
+              <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
+                <p className="text-3xl font-bold">Gràcia</p>
                 <p className="mt-2 text-slate-600">
-                  Fácil acceso para pacientes del Vallès
+                  Fácil acceso desde Barcelona y área metropolitana
                 </p>
               </div>
             </div>
@@ -244,11 +246,11 @@ export default function LandingQuironValles() {
               ¿A quién va dirigida esta página?
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-700">
-              A personas que buscan un cirujano maxilofacial en Sabadell o en el Vallès
-              para resolver problemas como muelas del juicio retenidas, dolor e infección
-              de cordales, quistes de los maxilares o colocación de implantes dentales.
-              Atendemos pacientes privados y trabajamos con las principales mutuas médicas
-              con cobertura en el hospital.
+              A personas que buscan un cirujano maxilofacial en Barcelona para resolver
+              problemas como muelas del juicio retenidas, dolor e infección de cordales,
+              quistes de los maxilares o colocación de implantes dentales. Atención
+              especializada en un entorno hospitalario moderno y preparado para cirugía
+              oral y maxilofacial.
             </p>
           </div>
 
@@ -256,7 +258,7 @@ export default function LandingQuironValles() {
             {nearbyCities.map((city) => (
               <span
                 key={city}
-                className="rounded-full bg-cyan-100 px-4 py-2 text-sm text-slate-700"
+                className="rounded-full bg-sky-100 px-4 py-2 text-sm text-slate-700"
               >
                 {city}
               </span>
@@ -264,7 +266,7 @@ export default function LandingQuironValles() {
           </div>
         </section>
 
-        <section className="border-y border-cyan-100 bg-cyan-50">
+        <section className="border-y border-sky-100 bg-sky-50">
           <div className="mx-auto max-w-6xl px-6 py-16">
             <div className="max-w-3xl">
               <h2 className="text-3xl font-bold tracking-tight">Qué tratamos</h2>
@@ -279,7 +281,7 @@ export default function LandingQuironValles() {
               {treatments.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-3xl border border-cyan-100 bg-white p-6 shadow-sm"
+                  className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm"
                 >
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="mt-3 leading-7 text-slate-700">{item.text}</p>
@@ -309,35 +311,35 @@ export default function LandingQuironValles() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-cyan-100 bg-cyan-50 p-8 shadow-sm">
+            <div className="rounded-3xl border border-sky-100 bg-sky-50 p-8 shadow-sm">
               <h2 className="text-3xl font-bold tracking-tight">Dónde estamos</h2>
 
               <p className="mt-4 text-lg leading-8 text-slate-700">
-                Hospital Quirónsalud del Vallès
+                HM Nou Delfos
                 <br />
-                Passeig Rubió i Ors, 23
+                Avinguda de Vallcarca, 151
                 <br />
-                08203 Sabadell, Barcelona
+                08023 Barcelona
               </p>
 
-              <div className="mt-6 overflow-hidden rounded-2xl border border-cyan-100 shadow-sm">
+              <div className="mt-6 overflow-hidden rounded-2xl border border-sky-100 shadow-sm">
                 <iframe
-                  src="https://www.google.com/maps?q=Hospital+Quir%C3%B3nsalud+del+Vall%C3%A8s+Sabadell&output=embed"
+                  src="https://www.google.com/maps?q=HM+Nou+Delfos+Barcelona&output=embed"
                   width="100%"
                   height="320"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Mapa Hospital Quirónsalud del Vallès"
+                  title="Mapa HM Nou Delfos"
                 />
               </div>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Hospital+Quironsalud+del+Valles+Sabadell"
+                href="https://www.google.com/maps/search/?api=1&query=HM+Nou+Delfos+Barcelona"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex rounded-2xl bg-cyan-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-cyan-700"
+                className="mt-4 inline-flex rounded-2xl bg-sky-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-sky-800"
               >
                 Cómo llegar en Google Maps
               </a>
@@ -348,15 +350,17 @@ export default function LandingQuironValles() {
                   144
                 </p>
                 <p>
-                  <span className="font-semibold">Consulta:</span> 1ª planta
+                  <span className="font-semibold">Hospital:</span> HM Nou Delfos
                 </p>
                 <p>
-                  <span className="font-semibold">Reserva online:</span>{' '}
+                  <span className="font-semibold">Web del hospital:</span>{' '}
                   <a
-                    href="https://www.quironsalud.com/valles/es/cita-medica#r!/n!/29?dir=next"
+                    href="https://www.hmhospitales.com/hm-nou-delfos"
                     className="underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Pedir cita en Quirónsalud
+                    Ver HM Nou Delfos
                   </a>
                 </p>
               </div>
@@ -367,12 +371,12 @@ export default function LandingQuironValles() {
         <section className="mx-auto max-w-6xl px-6 py-16">
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold tracking-tight">
-              Extracción de muelas del juicio en Sabadell
+              Extracción de muelas del juicio en Barcelona
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-700">
               Las muelas del juicio o cordales pueden provocar dolor, infecciones
               repetidas, inflamación de la encía o daño a los dientes vecinos. Nuestro
-              equipo de cirugía oral y maxilofacial en Sabadell está especializado en la
+              equipo de cirugía oral y maxilofacial en Barcelona está especializado en la
               extracción de cordales incluidos o complejos, utilizando técnicas
               quirúrgicas seguras y una planificación individualizada para cada paciente.
             </p>
@@ -384,17 +388,16 @@ export default function LandingQuironValles() {
           </div>
         </section>
 
-        <section className="border-y border-cyan-100 bg-cyan-50">
+        <section className="border-y border-sky-100 bg-sky-50">
           <div className="mx-auto max-w-6xl px-6 py-16">
             <div className="max-w-3xl">
               <h2 className="text-3xl font-bold tracking-tight">
-                Implantes dentales en Sabadell
+                Implantes dentales en Barcelona
               </h2>
               <p className="mt-4 text-lg leading-8 text-slate-700">
                 Los implantes dentales permiten sustituir dientes perdidos recuperando la
-                función masticatoria y la estética. En nuestra consulta del Hospital
-                Quirónsalud del Vallès realizamos tanto implantes unitarios como
-                rehabilitaciones más complejas.
+                función masticatoria y la estética. En nuestra consulta en HM Nou Delfos
+                realizamos tanto implantes unitarios como rehabilitaciones más complejas.
               </p>
               <p className="mt-4 text-lg leading-8 text-slate-700">
                 También tratamos casos con pérdida de hueso, dientes retenidos o
@@ -408,14 +411,13 @@ export default function LandingQuironValles() {
         <section className="mx-auto max-w-6xl px-6 py-16">
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold tracking-tight">
-              Unidad de Cirugía Oral y Maxilofacial en Sabadell
+              Unidad de Cirugía Oral y Maxilofacial en Barcelona
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-700">
-              La Unidad de Cirugía Oral y Maxilofacial del Hospital Quirónsalud del
-              Vallès está orientada al diagnóstico y tratamiento quirúrgico de patologías
-              de la cavidad oral y de los maxilares. Nuestro equipo atiende a pacientes
-              de Sabadell y del conjunto del Vallès que requieren procedimientos de
-              cirugía oral avanzada.
+              La Unidad de Cirugía Oral y Maxilofacial de HM Nou Delfos está orientada al
+              diagnóstico y tratamiento quirúrgico de patologías de la cavidad oral y de
+              los maxilares. Nuestro equipo atiende a pacientes de Barcelona y del área
+              metropolitana que requieren procedimientos de cirugía oral avanzada.
             </p>
             <p className="mt-4 text-lg leading-8 text-slate-700">
               Entre los tratamientos más frecuentes se encuentran la extracción de muelas
@@ -427,8 +429,8 @@ export default function LandingQuironValles() {
             <p className="mt-4 text-lg leading-8 text-slate-700">
               Nuestro objetivo es ofrecer una atención médica especializada, con un
               enfoque seguro y personalizado para cada paciente, utilizando técnicas
-              actuales de cirugía oral y maxilofacial dentro del entorno hospitalario del
-              Hospital Quirónsalud del Vallès.
+              actuales de cirugía oral y maxilofacial dentro del entorno hospitalario de
+              HM Nou Delfos.
             </p>
           </div>
         </section>
@@ -513,41 +515,41 @@ export default function LandingQuironValles() {
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <a
-              href="/muelas-del-juicio-sabadell"
-              className="block rounded-3xl border border-cyan-100 p-6 transition hover:shadow-md"
+              href="/muelas-del-juicio-barcelona"
+              className="block rounded-3xl border border-sky-100 p-6 transition hover:shadow-md"
             >
               <h3 className="text-xl font-semibold">
-                Extracción de muelas del juicio en Sabadell
+                Extracción de muelas del juicio en Barcelona
               </h3>
               <p className="mt-3 text-slate-700">
                 Información detallada sobre cordales incluidos, síntomas frecuentes,
                 cuándo es recomendable la extracción y cómo es el proceso de
                 recuperación.
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-cyan-900">
+              <span className="mt-4 inline-block text-sm font-semibold text-slate-900">
                 Ver información completa →
               </span>
             </a>
 
             <a
-              href="/implantes-dentales-sabadell"
-              className="block rounded-3xl border border-cyan-100 p-6 transition hover:shadow-md"
+              href="/implantes-dentales-barcelona"
+              className="block rounded-3xl border border-sky-100 p-6 transition hover:shadow-md"
             >
               <h3 className="text-xl font-semibold">
-                Implantes dentales en Sabadell
+                Implantes dentales en Barcelona
               </h3>
               <p className="mt-3 text-slate-700">
                 Explicación completa sobre el tratamiento con implantes dentales,
                 planificación quirúrgica, casos complejos y resultados esperables.
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-cyan-900">
+              <span className="mt-4 inline-block text-sm font-semibold text-slate-900">
                 Ver información completa →
               </span>
             </a>
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-cyan-600 to-rose-400 text-white">
+        <section className="bg-gradient-to-r from-sky-700 to-sky-500 text-white" id="contacto">
           <div className="mx-auto max-w-6xl px-6 py-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
               ¿Tienes dolor por una muela del juicio o necesitas valorar implantes
@@ -555,21 +557,14 @@ export default function LandingQuironValles() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-white/90">
-              Nuestro equipo de cirugía oral y maxilofacial en Sabadell puede valorar tu
+              Nuestro equipo de cirugía oral y maxilofacial en Barcelona puede valorar tu
               caso y orientarte sobre el tratamiento más adecuado.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
-                href="https://www.quironsalud.com/valles/es/cita-medica#r!/n!/29?dir=next"
-                className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-cyan-900 shadow-sm transition hover:opacity-90"
-              >
-                Pedir cita online
-              </a>
-
-              <a
                 href="tel:+34679176144"
-                className="rounded-2xl border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:opacity-90"
               >
                 Llamar ahora
               </a>
@@ -581,6 +576,15 @@ export default function LandingQuironValles() {
                 className="rounded-2xl border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Escribir por WhatsApp
+              </a>
+
+              <a
+                href="https://www.hmhospitales.com/hm-nou-delfos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-2xl border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Ver hospital
               </a>
             </div>
           </div>
@@ -597,11 +601,11 @@ export default function LandingQuironValles() {
           WhatsApp
         </a>
 
-        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-cyan-100 bg-white/95 p-3 backdrop-blur md:hidden">
+        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-sky-100 bg-white/95 p-3 backdrop-blur md:hidden">
           <div className="mx-auto flex max-w-6xl gap-3">
             <a
               href="tel:+34679176144"
-              className="flex-1 rounded-2xl bg-cyan-600 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-cyan-700"
+              className="flex-1 rounded-2xl bg-sky-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-sky-800"
             >
               Llamar
             </a>
