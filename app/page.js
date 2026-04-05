@@ -7,6 +7,9 @@
 // "Unidad de Cirugía Oral y Maxilofacial en HM Nou Delfos, Barcelona. Especialistas en muelas del juicio, cordales incluidos, implantes dentales y cirugía oral compleja."
 
 export default function LandingHMNouDelfos() {
+  const appointmentUrl =
+    'https://portaldelpaciente.hmhospitales.com/peticion-cita';
+
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalClinic',
@@ -33,12 +36,13 @@ export default function LandingHMNouDelfos() {
       'Horta-Guinardó',
       'Les Corts',
       'Badalona',
-      'L\'Hospitalet de Llobregat',
+      "L'Hospitalet de Llobregat",
       'Sant Cugat del Vallès',
       'Barcelona provincia',
     ],
     sameAs: [
       'https://www.hmhospitales.com/hm-nou-delfos',
+      appointmentUrl,
     ],
   };
 
@@ -103,14 +107,14 @@ export default function LandingHMNouDelfos() {
     'Horta-Guinardó',
     'Les Corts',
     'Badalona',
-    'L’Hospitalet de Llobregat',
+    "L'Hospitalet de Llobregat",
     'Sant Cugat del Vallès',
     'Esplugues de Llobregat',
   ];
 
   function TeamMemberCard({ doctor }) {
     return (
-      <article className="rounded-3xl border border-sky-100 bg-white p-5 shadow-sm">
+      <article className="rounded-3xl border border-sky-100 bg-white p-5 shadow-sm transition hover:shadow-md">
         <div className="mb-4 h-72 overflow-hidden rounded-2xl bg-slate-100">
           <img
             src={doctor.img}
@@ -121,7 +125,7 @@ export default function LandingHMNouDelfos() {
           />
         </div>
 
-        <h3 className="text-lg font-semibold">{doctor.name}</h3>
+        <h3 className="text-lg font-semibold text-slate-900">{doctor.name}</h3>
         <p className="mt-1 text-sm font-medium text-sky-700">{doctor.role}</p>
         <p className="mt-3 text-sm leading-6 text-slate-600">{doctor.bio}</p>
       </article>
@@ -135,35 +139,43 @@ export default function LandingHMNouDelfos() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
-      <header className="sticky top-0 z-40 w-full border-b border-sky-100 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+      <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
           <div className="flex items-center gap-4">
             <img
               src="/logo-ocm.png"
               alt="Unidad de Cirugía Oral y Maxilofacial"
               className="h-12 w-auto"
             />
-            <div className="text-sm font-medium text-slate-600">
-              Unidad de Cirugía Oral y Maxilofacial
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
+                HM Nou Delfos
+              </p>
+              <p className="text-sm font-medium text-slate-600">
+                Unidad de Cirugía Oral y Maxilofacial
+              </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <img
-              src="/logo-hm-nou-delfos.png"
-              alt="HM Nou Delfos"
-              className="h-10 w-auto"
-            />
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href={appointmentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl bg-sky-700 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-800"
+            >
+              Pedir cita
+            </a>
           </div>
         </div>
       </header>
 
       <main className="min-h-screen bg-white pb-24 text-slate-900 selection:bg-sky-100">
-        <section className="border-b border-sky-100 bg-sky-50">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
+        <section className="border-b border-slate-200 bg-gradient-to-b from-sky-50 via-white to-white">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
             <div>
-              <span className="inline-flex rounded-full border border-slate-300 px-4 py-1 text-sm font-medium text-slate-700">
-                Cirugía Oral y Maxilofacial · HM Nou Delfos
+              <span className="inline-flex rounded-full border border-slate-300 bg-white px-4 py-1 text-sm font-medium text-slate-700">
+                Cirugía Oral y Maxilofacial · HM Nou Delfos · Barcelona
               </span>
 
               <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-900 lg:text-5xl">
@@ -171,7 +183,7 @@ export default function LandingHMNouDelfos() {
                 dentales en Barcelona
               </h1>
 
-              <p className="mt-5 text-lg leading-8 text-slate-700">
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-700">
                 Atendemos a pacientes de Barcelona y poblaciones cercanas que necesitan
                 extracción de cordales incluidos, tratamiento de quistes maxilares e
                 implantes dentales, tanto en casos sencillos como complejos. Atención
@@ -180,7 +192,9 @@ export default function LandingHMNouDelfos() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="#contacto"
+                  href={appointmentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-2xl bg-sky-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-800"
                 >
                   Pedir cita
@@ -188,7 +202,7 @@ export default function LandingHMNouDelfos() {
 
                 <a
                   href="tel:+34679176144"
-                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-sky-100"
+                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-sky-50"
                 >
                   Llamar al 679 176 144
                 </a>
@@ -197,7 +211,7 @@ export default function LandingHMNouDelfos() {
                   href="https://wa.me/34679176144"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-sky-100"
+                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-sky-50"
                 >
                   WhatsApp
                 </a>
@@ -210,7 +224,7 @@ export default function LandingHMNouDelfos() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm sm:col-span-2">
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:col-span-2">
                 <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
                   Tratamientos destacados
                 </p>
@@ -223,26 +237,26 @@ export default function LandingHMNouDelfos() {
                 </ul>
               </div>
 
-              <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-bold">Barcelona</p>
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                <p className="text-3xl font-bold text-slate-900">Barcelona</p>
                 <p className="mt-2 text-slate-600">
                   Atención hospitalaria en HM Nou Delfos
                 </p>
               </div>
 
-              <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-bold">Gràcia</p>
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+                <p className="text-3xl font-bold text-slate-900">Planta -1</p>
                 <p className="mt-2 text-slate-600">
-                  Fácil acceso desde Barcelona y área metropolitana
+                  Ubicación de la consulta en el hospital
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-16">
+        <section className="mx-auto max-w-7xl px-6 py-16">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
               ¿A quién va dirigida esta página?
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-700">
@@ -266,10 +280,12 @@ export default function LandingHMNouDelfos() {
           </div>
         </section>
 
-        <section className="border-y border-sky-100 bg-sky-50">
-          <div className="mx-auto max-w-6xl px-6 py-16">
+        <section className="border-y border-slate-200 bg-sky-50/60">
+          <div className="mx-auto max-w-7xl px-6 py-16">
             <div className="max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tight">Qué tratamos</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+                Qué tratamos
+              </h2>
               <p className="mt-4 text-lg leading-8 text-slate-700">
                 Tratamos patología habitual y compleja de cirugía oral y maxilofacial,
                 con especial dedicación a la extracción de cordales incluidos, la cirugía
@@ -281,9 +297,11 @@ export default function LandingHMNouDelfos() {
               {treatments.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm"
+                  className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
                 >
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <h3 className="text-xl font-semibold text-slate-900">
+                    {item.title}
+                  </h3>
                   <p className="mt-3 leading-7 text-slate-700">{item.text}</p>
                 </article>
               ))}
@@ -291,13 +309,13 @@ export default function LandingHMNouDelfos() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+        <section className="mx-auto max-w-7xl px-6 py-16">
+          <div className="grid gap-10 lg:grid-cols-[1.45fr_0.95fr] lg:items-start">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900">
                 Equipo de cirujanos maxilofaciales
               </h2>
-              <p className="mt-4 text-lg leading-8 text-slate-700">
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-700">
                 Equipo de cirugía oral y maxilofacial con experiencia en cirugía de
                 cordales incluidos, implantes dentales y tratamiento de patología oral
                 compleja. El Dr. Alfonso Mogedas Vegara es el jefe de servicio y
@@ -311,8 +329,10 @@ export default function LandingHMNouDelfos() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-sky-100 bg-sky-50 p-8 shadow-sm">
-              <h2 className="text-3xl font-bold tracking-tight">Dónde estamos</h2>
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+                Dónde estamos
+              </h2>
 
               <p className="mt-4 text-lg leading-8 text-slate-700">
                 HM Nou Delfos
@@ -322,7 +342,7 @@ export default function LandingHMNouDelfos() {
                 08023 Barcelona
               </p>
 
-              <div className="mt-6 overflow-hidden rounded-2xl border border-sky-100 shadow-sm">
+              <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
                 <iframe
                   src="https://www.google.com/maps?q=HM+Nou+Delfos+Barcelona&output=embed"
                   width="100%"
@@ -350,17 +370,17 @@ export default function LandingHMNouDelfos() {
                   144
                 </p>
                 <p>
-                  <span className="font-semibold">Hospital:</span> HM Nou Delfos
+                  <span className="font-semibold">Consulta:</span> Planta -1
                 </p>
                 <p>
-                  <span className="font-semibold">Web del hospital:</span>{' '}
+                  <span className="font-semibold">Pedir cita:</span>{' '}
                   <a
-                    href="https://www.hmhospitales.com/hm-nou-delfos"
+                    href={appointmentUrl}
                     className="underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Ver HM Nou Delfos
+                    Portal del Paciente HM
                   </a>
                 </p>
               </div>
@@ -368,9 +388,9 @@ export default function LandingHMNouDelfos() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-16">
+        <section className="mx-auto max-w-7xl px-6 py-16">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
               Extracción de muelas del juicio en Barcelona
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-700">
@@ -388,10 +408,10 @@ export default function LandingHMNouDelfos() {
           </div>
         </section>
 
-        <section className="border-y border-sky-100 bg-sky-50">
-          <div className="mx-auto max-w-6xl px-6 py-16">
+        <section className="border-y border-slate-200 bg-sky-50/60">
+          <div className="mx-auto max-w-7xl px-6 py-16">
             <div className="max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tight">
+              <h2 className="text-3xl font-bold tracking-tight text-slate-900">
                 Implantes dentales en Barcelona
               </h2>
               <p className="mt-4 text-lg leading-8 text-slate-700">
@@ -408,9 +428,9 @@ export default function LandingHMNouDelfos() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-16">
+        <section className="mx-auto max-w-7xl px-6 py-16">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
               Unidad de Cirugía Oral y Maxilofacial en Barcelona
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-700">
@@ -435,12 +455,14 @@ export default function LandingHMNouDelfos() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-3xl font-bold tracking-tight">Preguntas frecuentes</h2>
+        <section className="mx-auto max-w-7xl px-6 py-16">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+            Preguntas frecuentes
+          </h2>
 
           <div className="mt-8 max-w-3xl space-y-6 text-slate-700">
             <div>
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-lg font-semibold text-slate-900">
                 ¿Cuándo es necesario quitar las muelas del juicio?
               </h3>
               <p className="mt-2">
@@ -452,7 +474,7 @@ export default function LandingHMNouDelfos() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-lg font-semibold text-slate-900">
                 ¿Es dolorosa la extracción de una muela del juicio?
               </h3>
               <p className="mt-2">
@@ -465,7 +487,7 @@ export default function LandingHMNouDelfos() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-lg font-semibold text-slate-900">
                 ¿Cuánto tiempo dura la recuperación?
               </h3>
               <p className="mt-2">
@@ -477,7 +499,7 @@ export default function LandingHMNouDelfos() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-lg font-semibold text-slate-900">
                 ¿Cuándo es recomendable colocar un implante dental?
               </h3>
               <p className="mt-2">
@@ -489,7 +511,7 @@ export default function LandingHMNouDelfos() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-lg font-semibold text-slate-900">
                 ¿Cuánto tiempo dura un implante dental?
               </h3>
               <p className="mt-2">
@@ -502,8 +524,8 @@ export default function LandingHMNouDelfos() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-3xl font-bold tracking-tight">
+        <section className="mx-auto max-w-7xl px-6 py-16">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900">
             Información ampliada sobre tratamientos
           </h2>
 
@@ -516,9 +538,9 @@ export default function LandingHMNouDelfos() {
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <a
               href="/muelas-del-juicio-barcelona"
-              className="block rounded-3xl border border-sky-100 p-6 transition hover:shadow-md"
+              className="block rounded-3xl border border-slate-200 p-6 transition hover:shadow-md"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-xl font-semibold text-slate-900">
                 Extracción de muelas del juicio en Barcelona
               </h3>
               <p className="mt-3 text-slate-700">
@@ -526,31 +548,34 @@ export default function LandingHMNouDelfos() {
                 cuándo es recomendable la extracción y cómo es el proceso de
                 recuperación.
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-slate-900">
+              <span className="mt-4 inline-block text-sm font-semibold text-sky-700">
                 Ver información completa →
               </span>
             </a>
 
             <a
               href="/implantes-dentales-barcelona"
-              className="block rounded-3xl border border-sky-100 p-6 transition hover:shadow-md"
+              className="block rounded-3xl border border-slate-200 p-6 transition hover:shadow-md"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-xl font-semibold text-slate-900">
                 Implantes dentales en Barcelona
               </h3>
               <p className="mt-3 text-slate-700">
                 Explicación completa sobre el tratamiento con implantes dentales,
                 planificación quirúrgica, casos complejos y resultados esperables.
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-slate-900">
+              <span className="mt-4 inline-block text-sm font-semibold text-sky-700">
                 Ver información completa →
               </span>
             </a>
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-sky-700 to-sky-500 text-white" id="contacto">
-          <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <section
+          className="bg-gradient-to-r from-sky-800 to-sky-600 text-white"
+          id="contacto"
+        >
+          <div className="mx-auto max-w-7xl px-6 py-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
               ¿Tienes dolor por una muela del juicio o necesitas valorar implantes
               dentales?
@@ -563,8 +588,17 @@ export default function LandingHMNouDelfos() {
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
-                href="tel:+34679176144"
+                href={appointmentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:opacity-90"
+              >
+                Pedir cita online
+              </a>
+
+              <a
+                href="tel:+34679176144"
+                className="rounded-2xl border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Llamar ahora
               </a>
@@ -576,15 +610,6 @@ export default function LandingHMNouDelfos() {
                 className="rounded-2xl border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Escribir por WhatsApp
-              </a>
-
-              <a
-                href="https://www.hmhospitales.com/hm-nou-delfos"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-2xl border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Ver hospital
               </a>
             </div>
           </div>
@@ -601,8 +626,8 @@ export default function LandingHMNouDelfos() {
           WhatsApp
         </a>
 
-        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-sky-100 bg-white/95 p-3 backdrop-blur md:hidden">
-          <div className="mx-auto flex max-w-6xl gap-3">
+        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-slate-200 bg-white/95 p-3 backdrop-blur md:hidden">
+          <div className="mx-auto flex max-w-7xl gap-3">
             <a
               href="tel:+34679176144"
               className="flex-1 rounded-2xl bg-sky-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-sky-800"
